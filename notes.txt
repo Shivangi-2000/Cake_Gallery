@@ -1,0 +1,502 @@
+Day1>>>>>>>>>>>>>>
+
+Installation 
+
+to Create an application in react we need create-react-app package for that we need node js
+
+Once nodejs is installed 
+
+Opne CMD 
+
+and execute command to install CRA (create-react-app)
+npm install create-react-app 
+
+After CRA is installed execute commdand to create app
+
+npx create-react-app appname
+
+Introduction to web
+
+FrontEnd + Backend 
+
+Instagram.com
+
+Frontend developers 
+Html + Css (Static)
+
+user interferes we need javascript 
+
+Other than js there is no language which can understand user events 
+
+Javascript is the Queen of the frontend 
+
+React is a javascript library which proovides u components to design an application 
+
+6-7 years back i got a charger 
+with no seperate usb 
+
+usb was fixed inside adaptor 
+
+charger = usb + Adaptor
+
+Component is a resubale individual functional unit 
+
+If it gets damaged do u have to pay whole cost of charger
+No only for the component 
+
+Component is individual small reusable it is easy to maintain 
+
+
+React provides us component based architecture 
+
+In terms of web applications component may be the smalles portion(reusable) u seperate
+
+story 
+post 
+login 
+logout
+reel 
+
+Offical Documenation 
+
+React is used to create SPA  
+
+which loads the ui into body on requirement 
+
+Gmail 
+makemytrip.com
+primevideo 
+
+concept is - application does not reload
+
+When we click on something ui changes inside the body but it doesnt reloads 
+
+Technically spa are the ones which have one Body tag 
+
+others are just partial html files which should not have body
+
+All Angular react and Vue js are used to  create frontend 
+
+Audi and BMW 
+
+Hyundai offers pickup 
+tata motors offers saftey 5 NCAP
+
+Web applucation architecture is MVC 
+
+Model view Controller 
+
+Model is database 
+Controller is Api 
+
+View is frontened User interface 
+
+View UI -- React stays at view layer 
+
+Node js -- 
+
+Before 2009 
+if u have a file ashu.js 
+was only executable inside browsers only in html files via scripting 
+
+in 2009 invented node 
+
+now u can run js file with node 
+
+node filename.js
+node ashu.js
+
+Node js is runtime env for executing js files 
+NPM - node package manager 
+
+used to bring js files from a centeralised place 
+npmjs.com where all the developers have publiched their packages for thw world to use 
+
+npm is a tool to manage packages 
+
+so thats why we installed a package CRA from npmjs.com into our machine 
+
+Murali asked what is npm package 
+
+any folder which contains package.json can be a npm package 
+
+
+Any js project must contain package.json
+if contains all the info about the package or project 
+
+version name author description 
+scripts and most imp dependencies 
+
+what a package is dependend on 
+
+u simply run npm install it will go package json and install all dependencies mentioned into package json 
+
+Global and another one local 
+
+local means into ur specific folder 
+
+E:/xyz/newfolder/ here
+
+D: /  local package will not accessible because it is into E drive 
+
+npx to use local package as global 
+
+npm install cra 
+
+Static folder means which can directly be accessed inside browsers 
+
+all the resources css images videos icons can be kept inot public folder 
+
+src -- this is our main thing our logic our code 
+developers's brain Source code 
+package.json is heart of the project 
+
+all the info is stored in package json 
+
+Node_modules all 3rd party js libraries installed into this
+
+iphone 13 
+
+a box comes -- component 
+phone adaptor manual pin -- components
+
+one component contains another components 
+
+A box contains n component basically it is a container over them 
+
+similary app.js is the root component it will contain all other components inside itself 
+
+JSX - javascript xml 
+javscript xtension
+
+in a js file react offers us to write html 
+
+
+its knowledge is js 
+but now it is extedned to html 
+
+in summary JSX is the html portion in a js file 
+
+Rules 
+1) in JSX all the tags must be closed 
+<input></input>
+2) style must be used into style={{height:"20px"}}
+
+style="height:20px; width:40px"
+style={{height:20px, width:40px}}
+
+3) All components must start with Caps letter 
+<button>
+
+<Button> user defined html 
+
+Should rule 
+
+4) Optional class should be used as className
+it will throw only warning
+
+DOM - contains all structure/properties of you html page 
+
+Virtual Dom -  lighter copy/represntation of actual Dom
+
+when u were - trend was u did calculation on rough sheet and placed the final anwer on actual sheet 
+
+when we work in reac we work in lighter copy that is Virtaul dom 
+
+once data is final we update it to the real dom 
+
+why we do that 
+
+because virtual dom is easy to traverse / faster traversal 
+
+so faster loading of changes 
+
+diffing algo is the cycle which compares actual do with virtual dom
+
+when the difference is found it updates the dom
+
+Ecmascript
+
+specifications 
+rules to use js 
+
+to declare a varibale we have keyword known as var 
+
+Es6 
+
+Es5 -- browsers still understand es5 
+we convert es6 into es5 and it is known as transpilling 
+
+by babel 
+
+Es6 is transpilled into es5 and then executed in browsers 
+Browsers partillay supportd es6
+
+
+New features we have to cover is es 6 feature 
+
+let var const 
+import and export 
+()=>{}
+
+var variables were global if defing something in a block 
+we were not able to restrict it 
+
+now we can 
+
+using let  we can introduce block level variables 
+
+const variables cant be re assigned 
+
+const trainer  = "Ashu"
+
+trainer =  something not allowed 
+
+re assignment cant be done 
+
+functions 
+
+function square(num){
+    return num*num
+}
+
+Arrow function came into es 6 
+which are used as shorter expression like 
+
+let square = num=>num*num
+
+Arrow ()=>{}
+
+Note -- this operator is introduced 
+
+import and export 
+
+N number of export statemenents 
+
+NOTE - ONLY ONE DEFAULT EXPORT CAN BE WRITTEN
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+function A(){
+
+}
+
+A function when returns a view is a component 
+Component is whatever u see individual small resuable enitity
+
+create a components folder
+
+create a file named with the component example Home.js
+create a function and return a view from that
+export that function 
+whereever u want to use it import and display it 
+
+Render 
+
+Home component where are u using it 
+App.js 
+
+if u direct want to insert it into index.html
+
+we have a function reactDOM.render(COmponent,wheretorender)
+
+
+Js is to be used in jsx or in html we use curly braces
+
+component will receive the data as input 
+
+Receiving the data as input is known as props 
+
+Props is an object passed from parent component to child component 
+
+
+Cakelist component is parent
+Cake component is child 
+
+Cakelist component can pass the inputs to child
+This process is known as Passing the props 
+
+How do we pass the props to component ?
+
+<Componentname prop1="value1" propN={valueN} />
+
+Once They have rendered something they cannot change it 
+
+Once component is rendered it does not update -- functional Components 
+
+2nd type of components Class Components
+state is an object which represents data over a period of time
+
+
+Updtae 
+
+if screen needts to be updated it should be statefull
+
+update feature is lacking it is stateless 
+
+NOTE : NEVER USE (=) Equals to for updating the state 
+// FOR UPDATIN THE STATE THE FUNCTION IS this.setState()
+
+and state is an object 
+
+this.setState() will accept an object 
+example  -----   this.setState({
+    salary:"We will not increase anything"
+})
+
+onEvent={method_name/function_name}
+
+Example 
+OnClick = {demo}
+onClick-{demo()} would be incorrect
+
+
+Signup 
+
+Name email password 
+signup
+
+import {button} from "react
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Lists and Keys 
+to always render the array is known as lists 
+
+
+when u repeat the same thing multiple times 
+u will have a track of that by a unique value that unique value is known as key
+
+
+we display lists using map function 
+
+button 
+div 
+Component
+
+var users = []
+
+users.map((each,index)=>{
+    return <button key={index}>{each}</button>
+})
+
+1 lakh 
+50000
+
+1
+50000
+1 lakh iteration 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+2019 Feb classes are no more required
+
+functional component state is missing they cant be updated 
+for that we used classes 
+
+Now to provide those features to functiona; components we have react hooks 
+
+React hooks are the functions
+they provide statefull features to stateless component
+
+useState()
+useEffect()
+
+functional component was missing state so it was not able the thing
+
+lets provide state  to function 
+
+var [property,propertyHandler] =  useState(initial value)
+
+componentDidMount()
+
+useEffect(()=>{
+
+}, [])
+
+
+on everyupdate of the component it is getting called 
+
+
+on mounting of component -- 
+on updating of component 
+
+Routing is basically
+opening component on some specified routes 
+
+Routes are a mapping of a path with a component
+
+{path:"/login" component:LoginComponent}
+
+when u open your project HOme/App.js
+ rather than we will place Router 
+
+ On whatever element u want to navigate
+
+ u wrap that element into Link tag
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ Route params and route query 
+
+ github.com/username
+ linkedin.com/in/usernam
+
+ /detail/:cakeid this is parameterized route 
+
+ :cakeid is the parameter
+
+
+ Second way to pass data to routes is route query 
+
+ if u have any /abc so the query can be sent to any route 
+
+ /abc?query1=value1&queryN=valueN
+
+They get the info from url , noe u make a http request 
+bring the details and show it to the component 
+
+// in react we can make http request via inbuilt functon of js 
+fetch
+
+// from this fetch there is a third larty package axios 
+
+// npm install axios 
+
+
+reaching out to a http server for response 
+
+url + method + requestdetails 
+
+https://apifromashu.herokuapp.com/api
+
+axios({
+    url:"",
+    method:post/get/patch,put,delete,
+    data:body 
+})
+
+axios({
+    url:"",
+    method:post,
+    data:json 
+})
+
+in get request we can't send body
+
+json which is returned is response.data 
+from that response.data we have to look out for what is coming
+
+Search functionality 
+
+when u click on search button u have to put that text onto search url by using query 
+
+in that search page u have to take that text from url 
+u have to bring the array from api and show it to user
+
+
+api is -- https://apifromashu.herokuapp.com/api/searchcakes?q=thattextenteredintobox
+method:"get"
+
+/login
+post
+{email,password}
