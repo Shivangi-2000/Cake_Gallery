@@ -4,7 +4,7 @@ import { useState } from "react"
 function Navbar(){
     let projectname = "Shivi's Cake Gallery"
     var [searchtext,setSearchtext] =  useState("")
-    var likes =103
+    //var likes =103
 
    
     function getText(e){
@@ -21,7 +21,7 @@ function Navbar(){
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <form class="d-flex">
-          {likes}
+          {/*likes*/}
         <input onChange={getText} class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
        <Link to={`/search?q=${searchtext}`}><button class="btn btn-outline-success" type="button">Search</button> </Link>
       </form>
