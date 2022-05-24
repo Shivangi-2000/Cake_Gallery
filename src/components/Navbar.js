@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 
 function Navbar(){
-    let projectname = "Shivi's Cake Gallery"
+    let projectname = "Cake Gallery"
     var [searchtext,setSearchtext] =  useState("")
     //var likes =103
 
