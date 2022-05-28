@@ -26,7 +26,7 @@ function Cakelist(){
    
 
    return (
-       <div className="row">
+       <div className="row" style={{marginLeft : "50px"}}>
          {cakes.map((each,index)=>{
              return <Cake data={each} key={index} />
          })}
