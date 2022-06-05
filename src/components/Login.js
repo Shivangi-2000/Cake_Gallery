@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 import { Link, useNavigate} from "react-router-dom"
 import Loader from "./Loader"
 
@@ -8,6 +9,7 @@ function Login(){
     var [loading, setLoading] = useState(false)
     var [error, setError] = useState(null)
     var navigate = useNavigate()
+    var dispatch = useDispatch()
     function getEmail(e){
         user.email = e.target.value
 
@@ -26,6 +28,10 @@ function Login(){
             setLoading(false)
             console.log("response from login api", response.data)
             if(response.data.token){
+                localStorage.token = response.data.token
+                dispatch({
+                    type : "LOGIN" //dispatch to reducers
+                })
                 navigate("/")
                 setLoading(false)
             }
