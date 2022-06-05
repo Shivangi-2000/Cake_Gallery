@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams } from "react-router"
 import Loader from "./Loader"
+import { connect } from "react-redux"
 
 const CakeDetails = (props) => {
   let params = useParams()
@@ -9,6 +10,7 @@ const CakeDetails = (props) => {
   let [cake, setCake] = useState()
 
   useEffect(()=>{
+        
         axios({
             method:"get",
             url:"https://apifromashu.herokuapp.com/api/cake/"+cakeid
@@ -23,7 +25,7 @@ const CakeDetails = (props) => {
     event.target.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoHD8IwNVC1TNA4pn6ZR4wzez4aibm7pxQjw&usqp=CAU"
   }
 
-  let ratings = Math.floor(cake?.ratings)
+  //let ratings = Math.floor(cake?.ratings)
   if(cake){
     return <div className="container mt-4">
     <h1>{cake.name}</h1>
@@ -88,3 +90,4 @@ const CakeDetails = (props) => {
 }
 
 export default CakeDetails
+//npm install redux react-redux
