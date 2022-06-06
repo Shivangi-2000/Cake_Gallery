@@ -6,6 +6,7 @@ import Pagenotfound from "./Pagenotfound";
 import Login from "./Login";
 import Cakedetail from "./Cakedetail";
 import Search from "./Search";
+import LoginModal from "./LoginModal";
 
 // react-router and react-router-dom
 
@@ -14,6 +15,7 @@ function MyRouter() {
         <div>
             <BrowserRouter>
             <Navbar />
+            <LoginModal/>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/signup" element={<Signup />} />

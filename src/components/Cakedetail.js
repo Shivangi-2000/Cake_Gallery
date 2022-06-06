@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import { useParams } from "react-router"
+import { Navigate, useNavigate, useParams } from "react-router"
 import Loader from "./Loader"
 import { connect } from "react-redux"
+import $ from "jquery"
 
 const CakeDetails = (props) => {
   let params = useParams()
   let cakeid = params.cakeid
   let [cake, setCake] = useState()
+  let navigate = useNavigate()
 
   useEffect(()=>{
         
@@ -19,6 +21,14 @@ const CakeDetails = (props) => {
             setCake(response.data.data)
         },(error)=>{console.log("Error from cake details api" , error)})
   },[])
+
+  function addToCart(){  //method for add to cart
+    if(!localStorage.token){
+      //$('#loginmodal').show()  // show login page in modal
+      navigate("/login") //if user has not login navigate to login page
+    }
+    var url = "https://apifromashu.herokuapp.com/api/addcaketocart"
+  }
 
 
   const onError = (event) => {
@@ -74,7 +84,7 @@ const CakeDetails = (props) => {
         </div>
         <hr />
         {/* <button type="button" className="btn btn-primary btn-md mr-1 mb-2">Buy now</button> */}
-        {!props.isLoading && <button  type="button" className="btn btn-light btn-md mr-1 mb-2"><i
+        {!props.isLoading && <button  type="button" onClick={addToCart} className="btn btn-light btn-md mr-1 mb-2"><i
             className="fas fa-shopping-cart pr-2"></i>Add to cart</button>}
         {props.isLoading && <button type="button" className="btn btn-light btn-md mr-1 mb-2" disabled><i
             className="fas fa-shopping-cart pr-2"></i> Please wait... Adding to cart</button>}
