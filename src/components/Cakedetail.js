@@ -3,7 +3,7 @@ import axios from "axios"
 import { Navigate, useNavigate, useParams } from "react-router"
 import Loader from "./Loader"
 import { connect } from "react-redux"
-import $ from "jquery"
+//import $ from "jquery"
 
 const CakeDetails = (props) => {
   let params = useParams()
@@ -28,6 +28,22 @@ const CakeDetails = (props) => {
       navigate("/login") //if user has not login navigate to login page
     }
     var url = "https://apifromashu.herokuapp.com/api/addcaketocart"
+    var requestjson = {
+      name : cake.name,
+      cakeid : cake.cakeid,
+      price : cake.price,
+      image : cake.image,
+      weight : cake.weight
+    }
+    axios({
+      url : url,
+      method : "post",
+      data : requestjson,
+      headers : {
+        authtoken : localStorage.token
+      }
+
+    })
   }
 
 

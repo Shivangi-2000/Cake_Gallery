@@ -32,8 +32,8 @@ function Navbar(props){
       </ul>
       <form class="d-flex">
        {!props.isloggedin && <Link to="/login"> <button class="btn btn-primary" type="submit">Login</button> </Link>}
-       {props.isloggedin && <Link to="/cart"> <button class="btn btn-primary" type="submit">Cart</button> </Link>}
-       {props.isloggedin &&  <button onClick = {logout} class="btn btn-primary" type="submit">Loginout</button> }
+       {props.isloggedin && <Link to="/cart"> <button class="btn btn-danger" type="submit">Cart</button> </Link>}
+       {props.isloggedin &&  <button onClick = {logout} class="btn btn-primary" type="submit">Logout</button> }
 
       </form>
     </div>

@@ -7,6 +7,7 @@ import Login from "./Login";
 import Cakedetail from "./Cakedetail";
 import Search from "./Search";
 import LoginModal from "./LoginModal";
+import Soppingcart from "./Soppingcart";
 
 // react-router and react-router-dom
 
@@ -21,6 +22,7 @@ function MyRouter() {
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/search" element={<Search />} />
+                    <Route path="/cart" element={<Soppingcart />} />
                     <Route path="/detail/:cakeid" element={<Cakedetail />} /> 
                     <Route path="/*" element={<Pagenotfound />} />
                 </Routes>
