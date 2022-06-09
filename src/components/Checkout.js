@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function Checkout() {
   return (
     <div className='row'>
-        <div className='col-md-4'>
+        <div className='col-md-2'>
             <ul class="nav flex-column">
                 
                 <li class="nav-item">
@@ -20,7 +20,7 @@ export default function Checkout() {
             </ul>
 
         </div>
-        <div className='col-md-8'>
+        <div className='col-md-10'>
             <Outlet></Outlet>
 
         </div>

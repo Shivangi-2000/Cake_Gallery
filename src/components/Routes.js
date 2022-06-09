@@ -32,7 +32,7 @@ function MyRouter() {
                         <Route path="address" element={<Address />}/>
                         <Route path="payment" element={<Payment />}/>
                     </Route>
-                    <Route path="/cart" element={<Soppingcart />} />
+                    {localStorage.token && <Route path="/cart" element={<Soppingcart />} />}
                     <Route path="/detail/:cakeid" element={<Cakedetail />} /> 
                     <Route path="/*" element={<Pagenotfound />} />
                 </Routes>
